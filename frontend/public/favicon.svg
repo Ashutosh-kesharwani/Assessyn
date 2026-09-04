@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d111d" />
+      <stop offset="100%" stop-color="#05070d" />
+    </linearGradient>
+    <linearGradient id="neonBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#f43f5e" />
+    </linearGradient>
+    <linearGradient id="bladeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="50%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="katanaGlint" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.25" />
+    </linearGradient>
+  </defs>
+
+  <!-- Base Squircle with Neon Cyber Border -->
+  <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#bgGrad)" stroke="url(#neonBorder)" stroke-width="2.5" />
+
+  <!-- Hexagonal Stealth Crest -->
+  <path d="M32 9L51 19V39L32 51L13 39V19L32 9Z" stroke="url(#bladeGrad)" stroke-width="2" stroke-linejoin="round" fill="#131b2e" fill-opacity="0.8" />
+
+  <!-- Assassin Blade Wings 'A' -->
+  <path d="M32 13L16 45H23L32 27L41 45H48L32 13Z" fill="url(#bladeGrad)" />
+
+  <!-- Katana Razor Reflection -->
+  <path d="M32 13L48 45H41L32 28L23 45H16L32 13Z" fill="url(#katanaGlint)" />
+
+  <!-- Blade Crossbar -->
+  <path d="M22 36H42" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" />
+
+  <!-- Radiant Shuriken Core Spark -->
+  <circle cx="32" cy="30" r="3.2" fill="#ffffff" />
+</svg>
