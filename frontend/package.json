@@ -1,0 +1,44 @@
+{
+  "name": "ai-interview-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.67.1",
+    "axios": "^1.8.2",
+    "caniuse-lite": "^1.0.30001810",
+    "clsx": "^2.1.1",
+    "docx": "^9.7.1",
+    "firebase": "^12.18.0",
+    "framer-motion": "^11.18.2",
+    "html2pdf.js": "^0.14.0",
+    "lucide-react": "^0.477.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-dropzone": "^14.3.8",
+    "react-hook-form": "^7.54.2",
+    "react-hot-toast": "^2.5.2",
+    "react-icons": "^5.5.0",
+    "react-markdown": "^9.0.3",
+    "react-router-dom": "^6.30.0",
+    "recharts": "^2.15.1",
+    "socket.io-client": "^4.8.1",
+    "zustand": "^4.5.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "vite": "^5.4.14"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Assessyn-AI",
+  "version": "1.0.0",
+  "description": "Assessyn — Next-Generation AI Mock Interview & Career Acceleration Platform featuring real-time adaptive interviews, ATS resume analytics, intelligent job matching, and AI-guided career roadmaps.",
+  "scripts": {
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "cd backend && npm install && cd ../frontend && npm install",
+    "start": "cd backend && npm start",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "dependencies": {
+    "concurrently": "^10.0.3"
+  }
+}

@@ -1,0 +1,863 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ═══════════════════════════════════════════════════════════════
+     🥷 NINJA THEME SYSTEM - 5 SHINOBI COLOR TEMPLATES
+     Each template carefully crafted for visual harmony and appeal
+     ═══════════════════════════════════════════════════════════════ */
+
+  /* ── 1. 🥷 SHADOW SHINOBI (Default - Void & Cyber Violet) ─────── */
+  :root,
+  [data-theme="shadow"],
+  [data-theme="dark"] {
+    --bg-app: #05060a;
+    --bg-surface: #0a0c14;
+    --bg-card: #0e1020;
+    --bg-card-hover: #161930;
+    --bg-glass: rgba(14, 16, 32, 0.85);
+    --bg-active: #1e2240;
+    --bg-disabled: #0c0e18;
+    --border-subtle: #1c2040;
+    --border-hover: #7c3aed;
+    --border-focus: #a78bfa;
+    --border-active: #8b5cf6;
+    --text-primary: #f1f5f9;
+    --text-secondary: #e1e7ee;
+    --text-muted: #64748b;
+    --text-disabled: #475569;
+    --text-inverse: #0e1020;
+    --accent-primary: #a78bfa;
+    --accent-secondary: #8b5cf6;
+    --accent-tertiary: #7c3aed;
+    --accent-gradient: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 50%, #7c3aed 100%);
+    --accent-glow: rgba(167, 139, 250, 0.35);
+    --accent-soft: rgba(167, 139, 250, 0.15);
+    --success-primary: #34d399;
+    --success-secondary: #10b981;
+    --success-soft: rgba(52, 211, 153, 0.15);
+    --warning-primary: #fbbf24;
+    --warning-secondary: #f59e0b;
+    --warning-soft: rgba(251, 191, 36, 0.15);
+    --danger-primary: #f87171;
+    --danger-secondary: #ef4444;
+    --danger-soft: rgba(248, 113, 113, 0.15);
+    --card-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.65), 0 0 30px -8px rgba(167, 139, 250, 0.2);
+    --card-shadow-hover: 0 16px 50px -8px rgba(0, 0, 0, 0.7), 0 0 40px -8px rgba(167, 139, 250, 0.3);
+    --particle-color: rgba(167, 139, 250, 0.7);
+    --toast-bg: #0e1020;
+    --toast-text: #f1f5f9;
+    --toast-border: #1c2040;
+  }
+
+  /* ── 2. 🍃 JADE SERPENT (Deep Bamboo Evergreen) ─────────────── */
+  [data-theme="forest"] {
+    --bg-app: #020a06;
+    --bg-surface: #04140c;
+    --bg-card: #082018;
+    --bg-card-hover: #0e3024;
+    --bg-glass: rgba(8, 32, 24, 0.85);
+    --bg-active: #143828;
+    --bg-disabled: #061810;
+    --border-subtle: #103828;
+    --border-hover: #059669;
+    --border-focus: #34d399;
+    --border-active: #10b981;
+    --text-primary: #ecfdf5;
+    --text-secondary: #a7f3d0;
+    --text-muted: #6ee7b7;
+    --text-disabled: #34d399;
+    --text-inverse: #082018;
+    --accent-primary: #34d399;
+    --accent-secondary: #10b981;
+    --accent-tertiary: #059669;
+    --accent-gradient: linear-gradient(135deg, #34d399 0%, #10b981 50%, #059669 100%);
+    --accent-glow: rgba(52, 211, 153, 0.35);
+    --accent-soft: rgba(52, 211, 153, 0.15);
+    --success-primary: #34d399;
+    --success-secondary: #10b981;
+    --success-soft: rgba(52, 211, 153, 0.2);
+    --warning-primary: #fbbf24;
+    --warning-secondary: #f59e0b;
+    --warning-soft: rgba(251, 191, 36, 0.15);
+    --danger-primary: #f87171;
+    --danger-secondary: #ef4444;
+    --danger-soft: rgba(248, 113, 113, 0.15);
+    --card-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.65), 0 0 30px -8px rgba(52, 211, 153, 0.2);
+    --card-shadow-hover: 0 16px 50px -8px rgba(0, 0, 0, 0.7), 0 0 40px -8px rgba(52, 211, 153, 0.3);
+    --particle-color: rgba(52, 211, 153, 0.7);
+    --toast-bg: #082018;
+    --toast-text: #ecfdf5;
+    --toast-border: #103828;
+  }
+
+  /* ── 3. 🍁 CRIMSON KATANA (Charcoal & Blood Maple) ─────────── */
+  [data-theme="maple"] {
+    --bg-app: #0c0406;
+    --bg-surface: #14080c;
+    --bg-card: #1e0c12;
+    --bg-card-hover: #2c141c;
+    --bg-glass: rgba(30, 12, 18, 0.85);
+    --bg-active: #381824;
+    --bg-disabled: #140810;
+    --border-subtle: #3c1820;
+    --border-hover: #f43f5e;
+    --border-focus: #fb7185;
+    --border-active: #f43f5e;
+    --text-primary: #fff1f2;
+    --text-secondary: #fecdd3;
+    --text-muted: #fda4af;
+    --text-disabled: #f87171;
+    --text-inverse: #1e0c12;
+    --accent-primary: #fb7185;
+    --accent-secondary: #f43f5e;
+    --accent-tertiary: #e11d48;
+    --accent-gradient: linear-gradient(135deg, #fb7185 0%, #f43f5e 50%, #e11d48 100%);
+    --accent-glow: rgba(251, 113, 133, 0.35);
+    --accent-soft: rgba(251, 113, 133, 0.15);
+    --success-primary: #34d399;
+    --success-secondary: #10b981;
+    --success-soft: rgba(52, 211, 153, 0.15);
+    --warning-primary: #fbbf24;
+    --warning-secondary: #f59e0b;
+    --warning-soft: rgba(251, 191, 36, 0.15);
+    --danger-primary: #fb7185;
+    --danger-secondary: #f43f5e;
+    --danger-soft: rgba(251, 113, 133, 0.2);
+    --card-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.65), 0 0 30px -8px rgba(251, 113, 133, 0.2);
+    --card-shadow-hover: 0 16px 50px -8px rgba(0, 0, 0, 0.7), 0 0 40px -8px rgba(251, 113, 133, 0.3);
+    --particle-color: rgba(251, 113, 133, 0.7);
+    --toast-bg: #1e0c12;
+    --toast-text: #fff1f2;
+    --toast-border: #3c1820;
+  }
+
+  /* ── 4. 🌸 SAKURA MIST (Midnight Plum & Electric Rose) ─────── */
+  [data-theme="sakura"] {
+    --bg-app: #0a0410;
+    --bg-surface: #100818;
+    --bg-card: #180e24;
+    --bg-card-hover: #241434;
+    --bg-glass: rgba(24, 14, 36, 0.85);
+    --bg-active: #301a44;
+    --bg-disabled: #120c1c;
+    --border-subtle: #301840;
+    --border-hover: #ec4899;
+    --border-focus: #f472b6;
+    --border-active: #ec4899;
+    --text-primary: #fdf2f8;
+    --text-secondary: #fbcfe8;
+    --text-muted: #f9a8d4;
+    --text-disabled: #f472b6;
+    --text-inverse: #180e24;
+    --accent-primary: #f472b6;
+    --accent-secondary: #ec4899;
+    --accent-tertiary: #db2777;
+    --accent-gradient: linear-gradient(135deg, #f472b6 0%, #ec4899 50%, #db2777 100%);
+    --accent-glow: rgba(244, 114, 182, 0.35);
+    --accent-soft: rgba(244, 114, 182, 0.15);
+    --success-primary: #34d399;
+    --success-secondary: #10b981;
+    --success-soft: rgba(52, 211, 153, 0.15);
+    --warning-primary: #fbbf24;
+    --warning-secondary: #f59e0b;
+    --warning-soft: rgba(251, 191, 36, 0.15);
+    --danger-primary: #f87171;
+    --danger-secondary: #ef4444;
+    --danger-soft: rgba(248, 113, 113, 0.15);
+    --card-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.65), 0 0 30px -8px rgba(244, 114, 182, 0.2);
+    --card-shadow-hover: 0 16px 50px -8px rgba(0, 0, 0, 0.7), 0 0 40px -8px rgba(244, 114, 182, 0.3);
+    --particle-color: rgba(244, 114, 182, 0.7);
+    --toast-bg: #180e24;
+    --toast-text: #fdf2f8;
+    --toast-border: #301840;
+  }
+
+  /* ── 5. ☀️ SOLAR SHURIKEN (Molten Onyx & Imperial Gold) ───────── */
+  [data-theme="gold"] {
+    --bg-app: #080604;
+    --bg-surface: #100c06;
+    --bg-card: #18140c;
+    --bg-card-hover: #241e14;
+    --bg-glass: rgba(24, 20, 12, 0.85);
+    --bg-active: #302818;
+    --bg-disabled: #100c08;
+    --border-subtle: #302814;
+    --border-hover: #f59e0b;
+    --border-focus: #fbbf24;
+    --border-active: #f59e0b;
+    --text-primary: #fffbeb;
+    --text-secondary: #fde68a;
+    --text-muted: #fcd34d;
+    --text-disabled: #fbbf24;
+    --text-inverse: #18140c;
+    --accent-primary: #fbbf24;
+    --accent-secondary: #f59e0b;
+    --accent-tertiary: #d97706;
+    --accent-gradient: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%);
+    --accent-glow: rgba(251, 191, 36, 0.35);
+    --accent-soft: rgba(251, 191, 36, 0.15);
+    --success-primary: #34d399;
+    --success-secondary: #10b981;
+    --success-soft: rgba(52, 211, 153, 0.15);
+    --warning-primary: #fbbf24;
+    --warning-secondary: #f59e0b;
+    --warning-soft: rgba(251, 191, 36, 0.2);
+    --danger-primary: #f87171;
+    --danger-secondary: #ef4444;
+    --danger-soft: rgba(248, 113, 113, 0.15);
+    --card-shadow: 0 12px 40px -8px rgba(0, 0, 0, 0.65), 0 0 30px -8px rgba(251, 191, 36, 0.2);
+    --card-shadow-hover: 0 16px 50px -8px rgba(0, 0, 0, 0.7), 0 0 40px -8px rgba(251, 191, 36, 0.3);
+    --particle-color: rgba(251, 191, 36, 0.7);
+    --toast-bg: #18140c;
+    --toast-text: #fffbeb;
+    --toast-border: #302814;
+  }
+
+  * {
+    box-sizing: border-box;
+    border-color: var(--border-subtle);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    transition: background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.35s ease;
+  }
+
+  body {
+    background-color: var(--bg-app);
+    background-image:
+      radial-gradient(circle at 50% 0%, var(--accent-glow) 0%, transparent 45%),
+      radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.015) 0%, transparent 35%),
+      radial-gradient(circle at 85% 75%, var(--accent-glow) 0%, transparent 40%),
+      linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+    background-attachment: fixed;
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-app);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-subtle);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-primary);
+  }
+
+  ::selection {
+    background: var(--accent-glow);
+    color: var(--text-primary);
+  }
+}
+
+@layer components {
+  /* ── Awwwards 2-Style Shinobi Buttons (No Glow, Clean Color Fill) ── */
+
+  /* Style 1: Already Filled with Theme Gradient */
+  .btn-style-filled {
+    background: var(--accent-gradient);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  }
+
+  .btn-filled-slash {
+    position: absolute;
+    inset: 0;
+    width: 250%;
+    height: 100%;
+    background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.2) 50%,
+        transparent 100%);
+    transform: translateX(-150%) skewX(-25deg);
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .btn-style-filled:hover .btn-filled-slash {
+    transform: translateX(100%) skewX(-25deg);
+  }
+
+  .btn-style-filled:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+
+  /* Style 2: Outline with Slide Color-Fill on Hover */
+  .btn-style-outline-fill {
+    background-color: var(--bg-card);
+    border: 1.5px solid var(--border-subtle);
+    color: var(--text-primary);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .btn-slide-fill {
+    position: absolute;
+    inset: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--accent-gradient);
+    transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 0;
+    pointer-events: none;
+    border-radius: inherit;
+  }
+
+  .btn-style-outline-fill:hover .btn-slide-fill {
+    width: 100%;
+  }
+
+  .btn-style-outline-fill:hover {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  /* Style 3: Ghost Minimal */
+  .btn-style-ghost {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid transparent;
+  }
+
+  .btn-style-ghost:hover {
+    color: var(--text-primary);
+    background-color: var(--bg-card-hover);
+    border-color: var(--border-subtle);
+  }
+
+  /* Style 4: Glass Surface */
+  .btn-style-glass {
+    background: var(--bg-glass);
+    backdrop-filter: blur(16px);
+    border: 1px solid var(--border-subtle);
+    color: #ffffff;
+  }
+
+  .btn-style-glass:hover {
+    border-color: var(--border-focus);
+    background-color: var(--bg-card-hover);
+    transform: translateY(-1.5px);
+  }
+
+  /* ── Awwwards Cards ───────────────────────────────── */
+  .card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 1.25rem;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .card-glass {
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-subtle);
+    border-radius: 1.25rem;
+    box-shadow: var(--card-shadow);
+  }
+
+  .card-hover {
+    @apply card cursor-pointer;
+  }
+
+  .card-hover:hover {
+    background-color: var(--bg-card-hover);
+    border-color: var(--border-focus);
+    transform: translateY(-3.5px);
+    box-shadow: var(--card-shadow), 0 0 24px var(--accent-glow);
+  }
+
+  /* ── Form Inputs ─────────────────────────────────── */
+  .form-label {
+    @apply block text-sm font-semibold mb-1.5;
+    color: var(--text-secondary);
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 rounded-xl text-sm transition-all duration-200;
+    background-color: var(--bg-app);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+  }
+
+  .form-input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .form-input:focus {
+    outline: none;
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 3px var(--accent-glow);
+  }
+
+  .form-textarea {
+    @apply form-input resize-none min-h-[120px];
+  }
+
+  .form-error {
+    @apply text-red-400 text-xs mt-1.5 flex items-center gap-1 font-medium;
+  }
+
+  .form-select {
+    @apply form-input appearance-none cursor-pointer;
+  }
+
+  /* ── Badges ──────────────────────────────────────── */
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-md;
+  }
+
+  .badge-brand {
+    background-color: var(--accent-soft);
+    color: var(--accent-primary);
+    border: 1px solid var(--border-focus);
+  }
+
+  .badge-success {
+    background-color: var(--success-soft);
+    color: var(--success-primary);
+    border: 1px solid var(--success-secondary);
+  }
+
+  .badge-warning {
+    background-color: var(--warning-soft);
+    color: var(--warning-primary);
+    border: 1px solid var(--warning-secondary);
+  }
+
+  .badge-danger {
+    background-color: var(--danger-soft);
+    color: var(--danger-primary);
+    border: 1px solid var(--danger-secondary);
+  }
+
+  .badge-slate {
+    background-color: var(--accent-soft);
+    color: var(--text-muted);
+    border: 1px solid var(--border-subtle);
+  }
+
+  .badge-ghost {
+    background-color: var(--bg-card);
+    color: var(--text-secondary);
+    border: 1px solid var(--border-subtle);
+  }
+
+  /* ── Gradient Text ───────────────────────────────── */
+  .gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* ── Progress Bar ────────────────────────────────── */
+  .progress-bar {
+    @apply h-2.5 rounded-full overflow-hidden;
+    background-color: var(--border-subtle);
+  }
+
+  .progress-fill {
+    @apply h-full rounded-full transition-all duration-500;
+    background: var(--accent-gradient);
+    box-shadow: 0 0 14px var(--accent-primary);
+  }
+
+  /* ── Additional Button Variants ───────────────────────── */
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 cursor-pointer;
+    background-color: var(--danger-soft);
+    border: 1px solid var(--danger-secondary);
+    color: var(--danger-primary);
+  }
+
+  .btn-danger:hover {
+    background-color: var(--danger-secondary);
+    color: var(--text-inverse);
+    border-color: var(--danger-primary);
+    transform: translateY(-1.5px);
+    box-shadow: 0 4px 16px var(--danger-soft);
+  }
+
+  .btn-success {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 cursor-pointer;
+    background-color: var(--success-soft);
+    border: 1px solid var(--success-secondary);
+    color: var(--success-primary);
+  }
+
+  .btn-success:hover {
+    background-color: var(--success-secondary);
+    color: var(--text-inverse);
+    border-color: var(--success-primary);
+    transform: translateY(-1.5px);
+    box-shadow: 0 4px 16px var(--success-soft);
+  }
+
+  .btn-warning {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 cursor-pointer;
+    background-color: var(--warning-soft);
+    border: 1px solid var(--warning-secondary);
+    color: var(--warning-primary);
+  }
+
+  .btn-warning:hover {
+    background-color: var(--warning-secondary);
+    color: var(--text-inverse);
+    border-color: var(--warning-primary);
+    transform: translateY(-1.5px);
+    box-shadow: 0 4px 16px var(--warning-soft);
+  }
+
+  .btn-disabled {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm cursor-not-allowed opacity-50;
+    background-color: var(--bg-disabled);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-disabled);
+  }
+
+  /* ── Card Variants ────────────────────────────────────── */
+  .card-hover {
+    @apply card cursor-pointer;
+  }
+
+  .card-hover:hover {
+    background-color: var(--bg-card-hover);
+    border-color: var(--border-focus);
+    transform: translateY(-3.5px);
+    box-shadow: var(--card-shadow-hover);
+  }
+
+  .card-active {
+    @apply card;
+    background-color: var(--bg-active);
+    border-color: var(--border-active);
+    box-shadow: var(--card-shadow), 0 0 30px var(--accent-glow);
+  }
+
+  .card-elevated {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 1.25rem;
+    box-shadow: var(--card-shadow);
+  }
+
+  .card-glass-hover {
+    @apply card-glass cursor-pointer;
+  }
+
+  .card-glass-hover:hover {
+    background: var(--bg-glass);
+    border-color: var(--border-focus);
+    transform: translateY(-3.5px);
+    box-shadow: var(--card-shadow-hover);
+  }
+
+  /* ── Alert/Toast Variants ─────────────────────────────── */
+  .alert {
+    @apply p-4 rounded-xl border flex items-start gap-3;
+  }
+
+  .alert-success {
+    background-color: var(--success-soft);
+    border-color: var(--success-secondary);
+    color: var(--success-primary);
+  }
+
+  .alert-warning {
+    background-color: var(--warning-soft);
+    border-color: var(--warning-secondary);
+    color: var(--warning-primary);
+  }
+
+  .alert-danger {
+    background-color: var(--danger-soft);
+    border-color: var(--danger-secondary);
+    color: var(--danger-primary);
+  }
+
+  .alert-info {
+    background-color: var(--accent-soft);
+    border-color: var(--border-focus);
+    color: var(--accent-primary);
+  }
+
+  /* ── Text Utilities ───────────────────────────────────── */
+  .text-primary {
+    color: var(--text-primary);
+  }
+
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+
+  .text-muted {
+    color: var(--text-muted);
+  }
+
+  .text-disabled {
+    color: var(--text-disabled);
+  }
+
+  .text-inverse {
+    color: var(--text-inverse);
+  }
+
+  .text-accent {
+    color: var(--accent-primary);
+  }
+
+  .text-success {
+    color: var(--success-primary);
+  }
+
+  .text-warning {
+    color: var(--warning-primary);
+  }
+
+  .text-danger {
+    color: var(--danger-primary);
+  }
+
+  .bg-primary {
+    background-color: var(--bg-app);
+  }
+
+  .bg-surface {
+    background-color: var(--bg-surface);
+  }
+
+  .bg-card {
+    background-color: var(--bg-card);
+  }
+
+  .bg-card-hover {
+    background-color: var(--bg-card-hover);
+  }
+
+  .bg-active {
+    background-color: var(--bg-active);
+  }
+
+  .bg-disabled {
+    background-color: var(--bg-disabled);
+  }
+
+  .bg-glass {
+    background-color: var(--bg-glass);
+  }
+
+  .bg-accent {
+    background: var(--accent-gradient);
+  }
+
+  .bg-accent-soft {
+    background-color: var(--accent-soft);
+  }
+
+  .bg-success-soft {
+    background-color: var(--success-soft);
+  }
+
+  .bg-warning-soft {
+    background-color: var(--warning-soft);
+  }
+
+  .bg-danger-soft {
+    background-color: var(--danger-soft);
+  }
+
+  .border-subtle {
+    border-color: var(--border-subtle);
+  }
+
+  .border-hover {
+    border-color: var(--border-hover);
+  }
+
+  .border-focus {
+    border-color: var(--border-focus);
+  }
+
+  .border-active {
+    border-color: var(--border-active);
+  }
+
+  /* ── Focus States ─────────────────────────────────────── */
+  .focus-ring:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--accent-glow);
+    border-color: var(--border-focus);
+  }
+
+  .focus-ring-danger:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--danger-soft);
+    border-color: var(--danger-secondary);
+  }
+
+  .focus-ring-success:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--success-soft);
+    border-color: var(--success-secondary);
+  }
+
+  /* ── Animation Utilities ──────────────────────────────── */
+  .animate-fade-in {
+    animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-spin-slow {
+    animation: spin 8s linear infinite;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+
+  /* ── Interactive States ───────────────────────────────── */
+  .interactive {
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .interactive:hover {
+    transform: translateY(-1px);
+  }
+
+  .interactive:active {
+    transform: scale(0.98);
+  }
+
+  .group-hover-lift:hover {
+    transform: translateY(-2px);
+  }
+
+  .group-hover-glow:hover {
+    box-shadow: var(--card-shadow), 0 0 24px var(--accent-glow);
+  }
+
+  /* ── Scrollbar ────────────────────────────────────────── */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-app);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-subtle);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-primary);
+  }
+
+  /* ── Selection ────────────────────────────────────────── */
+  ::selection {
+    background: var(--accent-glow);
+    color: var(--text-primary);
+  }
+
+  /* ── Gradient Text Helpers ────────────────────────────── */
+  .gradient-text {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-text-success {
+    background: linear-gradient(135deg, var(--success-primary) 0%, var(--success-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-text-warning {
+    background: linear-gradient(135deg, var(--warning-primary) 0%, var(--warning-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .gradient-text-danger {
+    background: linear-gradient(135deg, var(--danger-primary) 0%, var(--danger-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   📄 PRINT STYLES FOR RESUME EXPORT (A4 PERFECT PRINT)
+   ═══════════════════════════════════════════════════════════════ */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Hide entire dashboard UI (sidebars, navbars, modals, toolbars) */
+  nav, header, aside, button, footer,
+  .no-print,
+  [data-no-print="true"] {
+    display: none !important;
+    visibility: hidden !important;
+  }
+
+  /* Hide all siblings and ancestors of resume-printable-area */
+  body * {
+    visibility: hidden;
+  }
+
+  #resume-printable-area,
+  #resume-printable-area * {
+    visibility: visible !important;
+  }
+
+  #resume-printable-area {
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
