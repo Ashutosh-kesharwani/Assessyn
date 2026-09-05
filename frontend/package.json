@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^5.67.1",
+    "@vercel/speed-insights": "^2.0.0",
     "axios": "^1.8.2",
     "caniuse-lite": "^1.0.30001810",
     "clsx": "^2.1.1",
